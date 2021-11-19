@@ -1,0 +1,17 @@
+iş bu proje bir binary tree problemidir.
+ root = 5
+ 
+                       5                         
+                                           
+                                           
+                                          6
+               4              
+                                   7             8  
+                                   
+                                                         9
+         2           3
+         
+   1      
+         
+         
+         
