@@ -1,0 +1,44 @@
+SELECT COUNT(*) FROM film WHERE length > (SELECT AVG(length) FROM film);
+
+
+
+SELECT COUNT(*) FROM film WHERE rental_rate = (SELECT MAX(rental_rate) FROM film );
+
+
+
+
+SELECT * FROM film WHERE rental_rate = ((SELECT MIN(rental_rate) FROM film))
+AND (replacement_cost = (SELECT MIN(replacement_cost) FROM film )) ORDER BY title;
+
+
+
+
+SON SORU DA FULL JOIN TABLOSUNA İSİMLENDİRİP YARATAMADIĞIM İCİN EN FAZLA SAYIDA ALIŞVERİŞ YAPAN MÜŞTERİLERİ SIRALAYAMADIM
+
+
+--SELECT COUNT(*) FROM film WHERE length > (SELECT AVG(length) FROM film);
+
+--SELECT COUNT(*) FROM film WHERE rental_rate = (SELECT MAX(rental_rate) FROM film );
+
+
+--SELECT * FROM film WHERE rental_rate = ((SELECT MIN(rental_rate) FROM film))
+--AND (replacement_cost = (SELECT MIN(replacement_cost) FROM film )) ORDER BY title;
+
+
+--FULL JOIN payment ON customer.customer_id = payment.customer_id) 
+
+
+--SELECT JOINTABLE.customer_id, COUNT(customer_id) AS MOD_OF_customer_id FROM (SELECT * FROM customer 
+--FULL JOIN payment ON customer.customer_id = payment.customer_id) AS JOINTABLE
+--GROUP BY customer_id ORDER BY COUNT(customer_id) DESC;
+
+--CREATE TABLE JOINED AS SELECT first_name, last_name, customer_id FROM
+
+--SELECT first_name AS name, last_name AS lastname, amount, payment.customer_id AS ID FROM customer 
+--FULL JOIN payment ON customer.customer_id = payment.customer_id
+
+--SELECT customer_id, (SELECT first_name, last_name FROM customer) FROM payment subquery must return only one column
+
+
+
+
