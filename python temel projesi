@@ -33,4 +33,30 @@ if isinstance(x, list):
         x.reverse()
 
 print(x)
+
+
+
+
+
+
+not1: ingilizce yazılmıştır evrensel olması için
+not2: recursive fonksiyon denendi ama başarısız oldu
+örnek olarak
+*********************************************************************************************
+#x is given such as this but it might be given in another form of list as well 
+x = [[1, 2], [3, 4], [5, 6, 7]]
+
+def reverse(x):
+    if isinstance(x, list):
+        if len(x) == 0:
+            return []
+        i = 0
+        first, rest = x[0].reverse(), x[1:].reverse()
+        i = i+1
+        return reverse(first) + reverse(rest)
+    else:
+        return [x]
+reverse(x)
+*************************************************************************************************
+[None, None] çıktısı veriliyor
     
