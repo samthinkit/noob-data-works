@@ -1,0 +1,36 @@
+#pyhton temel proje 1. soru
+#x is given such as this but it might be given in another form of list as well 
+#the function gives correct result
+x = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+
+def flatten(x):
+    if isinstance(x, list):
+        if len(x) == 0:
+            return []
+        first, rest = x[0], x[1:]
+        return flatten(first) + flatten(rest)
+    else:
+        return [x]
+    
+flatten(x)
+
+
+
+#python temel proje 2. soru
+
+#x is given such as this but it might be given in another form of list as well 
+#the function gives correct result
+#!!! important !!! it will not give a valid if input square brackets  is entered sequentially such as [[[2,6]]] 
+x = [[1, 2], [3, 4], [5, 6, 7]]
+i=0
+while i < len(x):
+    x[i].reverse()
+    i +=1
+if isinstance(x, list):    
+    if len(x) == 0:
+        print([])
+    else:
+        x.reverse()
+
+print(x)
+    
